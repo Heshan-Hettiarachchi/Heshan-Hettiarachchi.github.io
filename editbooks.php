@@ -1,5 +1,5 @@
 <?php 
-require_once('connection.php');
+require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
 date_default_timezone_set("Asia/Colombo");
 $id = "";
     $title = "";
@@ -41,7 +41,7 @@ $id = "";
 <h1>Test Book Store</h1>
 	<div class="content">
   <pre>
-  		<form action="updatebooks.php" method="POST" enctype="multipart/form-data">
+  		<form action="https://quizzical-ride-f5a5f7.netlify.com/updatebooks.php" method="POST" enctype="multipart/form-data">
 		ISBN: <input type="text" name="ISBNno" value="<?php echo $id; ?>"/><br/>
 		Title: <input type="text" name="Title" value="<?php echo $title; ?>"/><br/>
     		Year of Publishing: <input type="text" name="YearOfPublishing" value="<?php echo $year; ?>"/><br/>
@@ -91,7 +91,7 @@ echo('<option name="'.$row['name'].'" value="'.$row['name'].'" '.$sel1.' >'.$row
           }
     ?>
     </select><br/>
-    		Image: <input type="file" name="file1" src="<?php echo 'images/$filename'; ?>"/><br/>
+    		Image: <input type="file" name="file1" src="<?php echo 'https://quizzical-ride-f5a5f7.netlify.com/images/$filename'; ?>"/><br/>
 		<input type="submit" name="Update" value="Update"/>
 	</form>
   </pre>

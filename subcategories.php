@@ -1,10 +1,10 @@
 <?php 
 session_start();
-require_once('connection.php');
+require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
 date_default_timezone_set("Asia/Colombo");
 if($_SESSION["StoreUn"] == null)
 {
-header("Location:logout.php");
+header("Location:https://quizzical-ride-f5a5f7.netlify.com/logout.php");
 }
 
 ?>
@@ -22,20 +22,20 @@ header("Location:logout.php");
 <h1>Test Book Store</h1>
   <div class="sidebar">
     <ul>
-      <li><a href="authors.php">Authors</a></li>      
-      <li><a href="categories.php">Categories</a></li>  
-      <li><a href="subcategories.php">Sub-Categories</a></li> 
-      <li><a href="books.php">Books</a></li>  
-      <li><a href="logout.php">Log-out</a></li>
+      <li><a href="https://quizzical-ride-f5a5f7.netlify.com/authors.php">Authors</a></li>      
+      <li><a href="https://quizzical-ride-f5a5f7.netlify.com/categories.php">Categories</a></li>  
+      <li><a href="https://quizzical-ride-f5a5f7.netlify.com/subcategories.php">Sub-Categories</a></li> 
+      <li><a href="https://quizzical-ride-f5a5f7.netlify.com/books.php">Books</a></li>  
+      <li><a href="https://quizzical-ride-f5a5f7.netlify.com/logout.php">Log-out</a></li>
     </ul>
   </div>
   <div class="content">
   <pre>
-    <form action="savesubcategories.php" method="POST">
+    <form action="https://quizzical-ride-f5a5f7.netlify.com/savesubcategories.php" method="POST">
     Sub-Category: <input type="text" name="SubCategoryName" /><br/>
     <input type="submit" name="Save" value="Save">
     <?php 
-	require_once('connection.php');
+	require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
           $query = mysqli_query($conn, "select * from subcategories");
           if(mysqli_num_rows($query) > 0)
           {

@@ -4,7 +4,7 @@ require_once('connection.php');
 date_default_timezone_set("Asia/Colombo");
 if($_SESSION["StoreUn"] == null)
 {
-header("Location:logout.php");
+header("Location:https://quizzical-ride-f5a5f7.netlify.com/logout.php");
 }         
           
           
@@ -30,11 +30,11 @@ header("Location:logout.php");
 <h1>Test Book Store</h1>
 	<div class="sidebar">
 		<ul>
-			<li><a href="authors.php">Authors</a></li>			
-			<li><a href="categories.php">Categories</a></li>	
-			<li><a href="subcategories.php">Sub-Categories</a></li>	
-			<li><a href="books.php">Books</a></li>	
-      <li><a href="logout.php">Log-out</a></li>
+			<li><a href="https://quizzical-ride-f5a5f7.netlify.com/authors.php">Authors</a></li>			
+			<li><a href="https://quizzical-ride-f5a5f7.netlify.com/categories.php">Categories</a></li>	
+			<li><a href="https://quizzical-ride-f5a5f7.netlify.com/subcategories.php">Sub-Categories</a></li>	
+			<li><a href="https://quizzical-ride-f5a5f7.netlify.com/books.php">Books</a></li>	
+      <li><a https://quizzical-ride-f5a5f7.netlify.com/out</a></li>
 		</ul>
 	</div>
 	<div class="content">
@@ -43,7 +43,7 @@ header("Location:logout.php");
       <button type="submit" name="SearchBookButton"><i class="fa fa-search"></i></button>
     </form>
     <pre>
-    <form action="savebooks.php" method="POST" enctype="multipart/form-data">
+    <form action="https://quizzical-ride-f5a5f7.netlify.com/savebooks.php" method="POST" enctype="multipart/form-data">
     ISBN: <input type="text" name="ISBNno" /><br/>
 
     Title: <input type="text" name="Title" /><br/>
@@ -56,7 +56,7 @@ header("Location:logout.php");
 
     Author: <select name="AuthorName">
     <?php 
-      require_once('connection.php');
+      require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
       $query = mysqli_query($conn, "select * from authors");
       if(mysqli_num_rows($query) > 0)
       {
@@ -71,7 +71,7 @@ header("Location:logout.php");
 
     Category: <select name="CategoryName">
     <?php 
-      require_once('connection.php');
+      require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
       $query = mysqli_query($conn, "select * from categories");
       if(mysqli_num_rows($query) > 0)
       {
@@ -86,7 +86,7 @@ header("Location:logout.php");
 
     Sub-Category: <select name="SubCategoryName">
     <?php 
-      require_once('connection.php');
+      require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
       $query = mysqli_query($conn, "select * from subcategories");
       if(mysqli_num_rows($query) > 0)
       {
@@ -104,7 +104,7 @@ header("Location:logout.php");
 		
 	</form>
 <?php 
-require_once('connection.php');
+require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
 if(isset($_POST["SearchBookButton"]))
           {
           $searchText = $_POST["searchBook"];
@@ -121,9 +121,9 @@ if(isset($_POST["SearchBookButton"]))
           	{
           		echo '<tr bordercolor=black>';
           		echo '<td bordercolor=black>'.$row[0].'</td>';
-              echo "<td bordercolor=black><img src='images/$row[6]' width='60px' height='100px'></img></td>";
+              echo "<td bordercolor=black><img src='https://quizzical-ride-f5a5f7.netlify.com/images/$row[6]' width='60px' height='100px'></img></td>";
           		echo '<td bordercolor=black>'.$row[1].'</td>';
-              echo '<td><form action="editbooks.php" method="POST"><input type="hidden" name="ISBN" value="'.$row[0].'"/><input type="submit" name="Edit" value="Edit"></form> </td>';
+              echo '<td><form action="https://quizzical-ride-f5a5f7.netlify.com/editbooks.php" method="POST"><input type="hidden" name="ISBN" value="'.$row[0].'"/><input type="submit" name="Edit" value="Edit"></form> </td>';
               
 	      echo '<td><button value="showAlert" onclick="showAlert();">View</button>
 
@@ -134,7 +134,7 @@ if(isset($_POST["SearchBookButton"]))
         </div>
 
     </div></td>';
-		echo '<td><form action="deletebooks.php" method="POST"><input type="hidden" name="ISBN" value="'.$row[0].'"/><input type="submit" name="Delete" value="Delete"></form></td>';
+		echo '<td><form action="https://quizzical-ride-f5a5f7.netlify.com/deletebooks.php" method="POST"><input type="hidden" name="ISBN" value="'.$row[0].'"/><input type="submit" name="Delete" value="Delete"></form></td>';
 
           		echo '</tr>';          	
 		}
@@ -157,9 +157,9 @@ $query = mysqli_query($conn, "select b1.ISBNno, b1.Title, b2.author, b3.Category
           	{
           		echo '<tr bordercolor=black>';
           		echo '<td bordercolor=black>'.$row[0].'</td>';
-              echo "<td bordercolor=black><img src='images/$row[6]' width='60px' height='100px'></img></td>";
+              echo "<td bordercolor=black><img src='https://quizzical-ride-f5a5f7.netlify.com/images/$row[6]' width='60px' height='100px'></img></td>";
           		echo '<td bordercolor=black>'.$row[1].'</td>';
-              echo '<td><form action="editbooks.php" method="POST"><input type="hidden" name="ISBN" value="'.$row[0].'"/><input type="submit" name="Edit" value="Edit"></form> </td>';
+              echo '<td><form action="https://quizzical-ride-f5a5f7.netlify.com/editbooks.php" method="POST"><input type="hidden" name="ISBN" value="'.$row[0].'"/><input type="submit" name="Edit" value="Edit"></form> </td>';
               
 	      echo '<td><button value="showAlert" onclick="showAlert();">View</button>
 
@@ -170,7 +170,7 @@ $query = mysqli_query($conn, "select b1.ISBNno, b1.Title, b2.author, b3.Category
         </div>
 
     </div></td>';
-		echo '<td><form action="deletebooks.php" method="POST"><input type="hidden" name="ISBN" value="'.$row[0].'"/><input type="submit" name="Delete" value="Delete"></form></td>';
+		echo '<td><form action="https://quizzical-ride-f5a5f7.netlify.com/deletebooks.php" method="POST"><input type="hidden" name="ISBN" value="'.$row[0].'"/><input type="submit" name="Delete" value="Delete"></form></td>';
 
           		echo '</tr>';          	
 		}

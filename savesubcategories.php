@@ -1,5 +1,5 @@
 <?php 
-require_once('connection.php');
+require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
 date_default_timezone_set("Asia/Colombo");
 if(isset($_POST["SubCategoryName"]))
   {

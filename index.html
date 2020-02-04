@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require_once('connection.php');
+require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
 date_default_timezone_set("Asia/Colombo");
 if($_SESSION["StoreUn"] == null)
 {
@@ -21,7 +21,7 @@ header("Location:logout.php");
 <body>
 	<h1>Test Book Store</h1>
 	<pre>
-	<form action="validateLogin.php" method="POST">
+	<form action="https://quizzical-ride-f5a5f7.netlify.com/validateLogin.php" method="POST">
 		Username:<input type="text" name="Username" /><br/>
 		Password:<input type="password" name="password" /><br/>
 		<input type="submit" name="Login" value="Login">

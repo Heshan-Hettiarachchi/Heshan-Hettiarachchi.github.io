@@ -16,11 +16,11 @@ $s = $_SESSION['StoreUn'];
 <h1>Test Book Store</h1>
 	<div class="sidebar">
 		<ul>
-			<li><a href="authors.php">Authors</a></li>			
-			<li><a href="categories.php">Categories</a></li>	
-			<li><a href="subcategories.php">Sub-Categories</a></li>	
-			<li><a href="books.php">Books</a></li>	
-			<li><a href="logout.php">Log-out</a></li>	
+			<li><a href="https://quizzical-ride-f5a5f7.netlify.com/authors.php">Authors</a></li>			
+			<li><a href="https://quizzical-ride-f5a5f7.netlify.com/categories.php">Categories</a></li>	
+			<li><a href="https://quizzical-ride-f5a5f7.netlify.com/subcategories.php">Sub-Categories</a></li>	
+			<li><a href="https://quizzical-ride-f5a5f7.netlify.com/books.php">Books</a></li>	
+			<li><a href="https://quizzical-ride-f5a5f7.netlify.com/logout.php">Log-out</a></li>	
 		</ul>
 	</div>
 </body>

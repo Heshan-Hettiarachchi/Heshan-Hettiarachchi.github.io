@@ -1,5 +1,5 @@
 <?php 
-require_once('connection.php');
+require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
 date_default_timezone_set("Asia/Colombo");
 $id = "";
     $title = "";
@@ -29,7 +29,7 @@ if(isset($_POST["Update"]))
     {
      if($filename != null)
     	{
-	move_uploaded_file($tempname, "images/$filename");
+	move_uploaded_file($tempname, "https://quizzical-ride-f5a5f7.netlify.com/images/$filename");
 	$query = mysqli_query($conn, "Update books set Title='{$title}', YearOfPublishing={$year}, Price='{$price}', Medium='{$medium}', Image='{$filename}' WHERE ISBNno='{$id}'");
          if($query==1)
         {

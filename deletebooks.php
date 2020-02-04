@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require_once('connection.php');
+require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
 date_default_timezone_set("Asia/Colombo");
 $id = "";
 if($_SESSION["StoreUn"] != null)
@@ -22,7 +22,7 @@ if($_SESSION["StoreUn"] != null)
 }
 else
 {
-header("Location:logout.php");
+header("Location:https://quizzical-ride-f5a5f7.netlify.com/logout.php");
 }
 
 ?>

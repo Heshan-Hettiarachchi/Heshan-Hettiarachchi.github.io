@@ -1,5 +1,5 @@
 <?php 
-require_once('connection.php');
+require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
 date_default_timezone_set("Asia/Colombo");
 if(isset($_POST["Username"]) && isset($_POST["password"]))
 {
@@ -27,7 +27,7 @@ echo 'Uname and PW received';
 		session_start();
 		echo 'Session:'.$_SESSION['StoreUn'];
 		session_start();
-                header("Location:home.php");
+                header("Location:https://quizzical-ride-f5a5f7.netlify.com/home.php");
 		}
 		else
 		{
@@ -40,7 +40,7 @@ echo 'Uname and PW received';
         	if($query==1)
         	{
 			
-            		header("Location:home.php");
+            		header("Location:https://quizzical-ride-f5a5f7.netlify.com/home.php");
         	}
                 else
                 {

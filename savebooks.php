@@ -1,5 +1,5 @@
 <?php 
-require_once('connection.php');
+require_once('https://quizzical-ride-f5a5f7.netlify.com/connection.php');
 date_default_timezone_set("Asia/Colombo");
 if(isset($_POST["Save"]))
   {
@@ -13,7 +13,7 @@ if(isset($_POST["Save"]))
     $author = $_POST["AuthorName"];
     $cat = $_POST["CategoryName"];
     $subcat = $_POST["SubCategoryName"];
-    if($id != null && $title != null && $year != 0 && $price != 0.00 && $medium != null && $author != null && $cat != null && $subcat != null && move_uploaded_file($tempname, "images/$filename"))
+    if($id != null && $title != null && $year != 0 && $price != 0.00 && $medium != null && $author != null && $cat != null && $subcat != null && move_uploaded_file($tempname, "images/https://quizzical-ride-f5a5f7.netlify.com/"))
     {
         
         $query = mysqli_query($conn, "insert into books(ISBNno, Title, YearOfPublishing, Price, Medium, Image) values('$id', '$title', '$year', '$price', '$medium', '$filename')");
